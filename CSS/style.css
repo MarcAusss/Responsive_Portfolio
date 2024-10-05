@@ -1,0 +1,767 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jura', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #1A1A1C;
+    overflow-x: hidden;
+}
+
+
+/* splash screen */
+
+.intro{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+    z-index: 9999;
+}
+
+.logo-header{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.logo-header2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.logo{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+    font-size: 120px;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+header{
+    display: flex; 
+    justify-content: space-between;
+    padding: 50px 100px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #1a1a1c8e;
+    z-index: 15;
+    align-items: center;
+    
+    
+
+    .name{
+        font-size: 15px;
+        color: white;
+    }
+
+    nav{
+        display: flex;
+        gap: 30px;
+
+        a{
+            font-size: 20px;
+            text-decoration: none;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .nav-button{
+            background-color: #920000;
+            height: fit-content;
+            border-radius: 50px;
+            
+        }
+    }
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+
+/*------------ Landing Page section ------------*/
+
+.landing{
+    height: 83.5vh;
+
+
+    .body{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        
+    
+        .image{
+            position: absolute;
+            top: -20px;
+            left: 460px;
+        }
+    
+        .none{
+            display: flex;
+            gap: 200px;
+            justify-content: center;
+            position: absolute;
+            top: 0px;
+            opacity: .6;
+            z-index: 1;
+            width: 90vw;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        
+            .span{
+                margin-right: 330px;
+            }
+            i{
+                color: rgba(255, 255, 255, 0.50);
+                font-size: 18px;
+                
+            }
+        }
+    
+        .portfolio{
+            font-size: 80px;
+            line-height: 120px;
+            letter-spacing: -5px;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+    
+            .solid{
+                color: #920000;
+                position: relative;
+                z-index: 8;
+                
+                span{
+                    color: white;
+                }
+            }
+    
+            .hollow{
+                color: transparent;
+                /* border: 5px solid #920000; */
+                /* text-shadow: 0px 2px #FF0000; */
+                -webkit-text-stroke-width: 3px; 
+                -webkit-text-stroke-color: #920000;
+            }
+        }
+    }
+}
+
+/*------------ End of Landing Page section ------------*/
+
+
+
+
+
+/*------------ welcome animation section ------------*/
+
+#page-down{
+    /* content: 'SCROLL DOWN'; */
+    font-size: 20px;
+    text-align: center;
+    padding-top: 15px;
+    position: absolute;
+    height: 100px;
+    width: 180px;
+    top: -90px;
+    left: 46%;
+    border-radius: 150px 150px 0 0; 
+    background-color: #C6C6C6;
+    text-decoration: none;
+    color: #464646;
+}
+
+.welcome{
+    position: relative;
+    height: 142px;
+
+    #scroller{
+        /* background-color: red; */
+        white-space: nowrap;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        position: relative;
+        background: #C6C6C6;
+        z-index: 10;
+
+        #scroller-in{
+            display: inline-block;
+            white-space: nowrap;
+            animation-name: scroll;
+            animation-duration: 30s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        .h4{
+            display: inline;
+            font-size: 120px;
+            font-weight: 900;
+            margin-right: 10px;
+            color: #838282;
+            
+        }
+
+        .h4:hover{
+            color: transparent;
+            -webkit-text-stroke: 2px #838282;
+            transition: all linear 0.3s;
+            cursor: pointer;
+            
+        }
+    }
+}
+/*------------ End of welcome animation section ------------*/
+
+
+
+
+
+/*------------ introduction about my self section ------------*/
+
+.about{
+    background-color: #4E4E50;
+    height: 780px;
+
+    .about-container{
+        display: flex;
+        justify-content: space-around;
+        padding: 100px 0px 0px 0px;
+
+
+        .left{
+            h1{
+                position: relative;
+                font-size: 75px;
+                color: white;
+
+                span{
+                    color: #920000;
+                }
+            }
+
+            h1::before{
+                content: '<h1>';
+                font-size: 20px;
+                position: absolute;
+                left: -50px;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.178);
+            }
+
+            h1::after{
+                content: '</h1>';
+                font-size: 20px;
+                position: absolute;
+                right: 0px;
+                bottom: 0;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.178);
+            }
+
+            p{
+                position: relative;
+                color: white;
+                font-size: 20px;
+                width: 450px;
+                margin: 70px 0;
+            }
+
+            p::before{
+                content: '<p>';
+                font-size: 20px;
+                position: absolute;
+                left: -50px;
+                top: -25px;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.178);
+            }
+            p::after{
+                content: '</p>';
+                font-size: 20px;
+                position: absolute;
+                right: 0px;
+                bottom: 0;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.178);
+            }
+            
+            .primary-btn{
+                background-color: #920000;
+                padding: 20px 20px;
+                border-radius: 50px;
+                font-size: 18px;
+                text-decoration: none;
+                color: white;
+                position: relative;
+
+                i{
+                    font-size: 30px;
+                    
+                }
+            }
+            .primary-btn::before{
+                content: '<a href="">';
+                font-size: 20px;
+                position: absolute;
+                left: -50px;
+                top: -25px;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.178);
+                cursor: default;
+            }
+            .primary-btn::after{
+                content: '</a>';
+                font-size: 20px;
+                position: absolute;
+                right: -45px;
+                bottom: -10px;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.178);
+            }
+        }
+
+        .right{
+            position: relative;
+
+            .float {
+                position: absolute;
+                color: white;
+                font-size: 19px;
+                font-family: Arial, Helvetica, sans-serif !important;
+                background-color: #4E4E50;
+                border: 5px solid #000;
+                border-radius: 50px;
+                padding: 10px 50px;
+            }
+        
+            .bday{
+                top: 50px;
+                left: -10%;
+            }
+
+            .citizenship{
+                right: -15%;
+                top: 200px;
+            }
+
+            .graduate{
+                top: 340px;
+                left: -35%;
+            }
+
+            .image-container{
+                background-color: #7E7E7E;
+                padding: 20px 20px 20px 20px;
+
+                h1{
+                    color:#920000;
+                    font-size: 75px;
+                    text-align: center;
+                }
+                
+                p{
+                    color: white;
+                    font-size: 19px;
+                    padding-left: 100px;
+                    margin: 20px 0;
+                }
+            }
+            .image-container::before{
+                content: '<img src=”profile.jpg”/>';
+                font-size: 20px;
+                position: absolute;
+                left: -50px;
+                top: -35px;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.178);
+            }
+        }
+    }
+}
+
+/*------------ end of introduction about my self section ------------*/
+
+
+
+
+
+/*------------ Timeline section ------------*/
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0px auto;
+    padding: 100px 0 100px 0;
+}
+
+.container {
+    padding: 10px 20px; /* Adjusted padding for smaller screens */
+    position: relative;
+    width: 90%; /* Full width on smaller screens */
+    transform: translateY(50px); /* Start slightly below */
+    opacity: 0; /* Initially hidden */
+    transition: transform 0.6s ease, opacity 0.6s ease; /* Animation effect */
+    color: white;
+    display: flex;
+    margin: 30px 0;
+    
+    img{
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+}
+
+.container.show {
+    transform: translateY(0); /* Slide up into position */
+    opacity: 1; /* Fully visible */
+}
+
+.left-container {
+    left: calc(50% - 50%); /* Align left containers */
+}
+
+.right-container {
+    left: calc(50% + 10%); /* Align right containers */
+}
+
+.container:nth-child(odd) {
+    left: calc(50% - 60%); /* Adjust left for odd children */
+}
+
+.container:nth-child(even) {
+    left: calc(50% + 10%); /* Adjust right for even children */
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px; /* Width of the line */
+    height: 100%; /* Full height */
+    top: 0; /* Align to the top */
+    left: 50%; /* Center the line */
+    background-color: #C3083F; /* Line color */
+    margin-left: -3px; /* Center it */
+    z-index: 1; /* Place behind text */
+}
+
+/* Keyframes for any extra animations */
+@keyframes moveline {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+/*------------ end of Timeline section ------------*/
+
+
+
+
+
+/*------------ Skills Descriptions section ------------*/
+
+.skills-container{
+    background: #4E4E50;
+    padding: 50px 150px;
+    display: flex;
+    justify-content: space-between;
+    height: 753px;
+    
+
+    .coding-skills{
+        width: 50%;
+
+        h1{
+            text-align: center;
+            color: white;
+            font-size: 56px;
+        }
+
+        .grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 50px;
+            justify-content: center;
+            margin-left: 150px;
+            gap: 50px;
+
+            .box-for-grid{
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                
+                img{
+                    width: 50px;
+                }
+
+                h2{
+                    color: white;
+                    font-size: 28px;
+                    
+                }
+            }
+        }
+
+        .link-boxes{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 60px;
+            
+            .primary-btn{
+                background-color: #920000;
+                padding: 10px 20px;
+                border-radius: 50px;
+                font-size: 26px;
+                text-decoration: none;
+                color: white;
+                width: fit-content;
+                position: relative;
+                margin-top: 50px;
+                margin-left: 60px;
+            }
+            .primary-btn::before{
+                content: '<p>';
+                font-size: 20px;
+                position: absolute;
+                left: -50px;
+                top: -25px;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.178);
+                cursor: default;
+            }
+            .primary-btn::after{
+                content: '</p>';
+                font-size: 20px;
+                position: absolute;
+                right: -45px;
+                bottom: -10px;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.178);
+            }
+        }
+    }
+    
+    .activities{
+        width: 40%;
+
+        h1{
+            color: white;
+            font-size: 56px;
+        }
+
+        .flex{
+            display: flex;
+            margin-top: 20px;
+
+            .flex-activity{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 20px;
+
+                h2{
+                    font-size: 21px;
+                    color: white;
+                }
+
+                p{
+                    color: white;
+                    font-size: 24px;
+                    
+
+                    span{
+                        color: #FF7B7B;
+                    }
+                }
+            }
+    
+        }
+        
+        .experience{
+            background-color: #7E7E7E;
+            width: 682px;
+            margin-top: 100px;
+            padding: 20px 60px;
+
+            h1{
+                color: #920000;
+                font-size: 56px;
+            }
+
+            p{
+                color: white;
+                font-size: 27px;
+                padding: 200px 20px;
+            }
+            
+        }
+    }
+}
+
+/*------------ end of Skills Descriptions section ------------*/
+
+
+
+/*------------- Horizontal Scroll(Projects) -------------*/
+
+
+.horizontal-scroll{
+    padding: 0 20px;
+
+    .horizontal-section{
+    padding: 100px 0;
+
+    .sticky-wrapper{
+        position: sticky;
+        top: 100px;
+        width: 100%;
+        overflow: hidden;
+
+        h1{
+            font-size: 56px;
+            color: white;
+            margin-left: 200px;
+            margin-bottom: 50px;
+            margin-top: 80px;
+            position: relative;
+            top: -50px;
+        }
+
+        .element-wrapper{
+            position: relative;
+            display: flex;
+
+            .element {
+                margin: 0 20px 0 0;
+                flex-shrink: 0;
+
+                img{
+                    width: 500px;
+                    height: 400px;
+                }
+                }
+            } 
+        }
+     
+    }
+    
+    .horizontal-section2 {
+    padding: 300px 0;
+    
+
+    .sticky-wrapper2 {
+        position: sticky;
+        top: 100px;
+        width: 100%;
+        overflow: hidden;
+
+        .element-wrapper2 {
+            position: relative;
+            display: flex;
+            
+            .element {
+                width: 500px;
+                height: 400px;
+                background-color: purple;
+                margin: 0 20px 0 0;
+                flex-shrink: 0;
+                }
+            }
+        }
+    }
+}
+
+/*------------- End of Horizontal Scroll(Projects) -------------*/
+
+
+
+/*------------- Footer(contact) -------------*/
+
+.contact{
+    height: 350px;
+    background-color: #920000;
+}
+
+/*------------- End of Footer(contact) -------------*/
+
+
+
+/*------------- Animations -------------*/
+
+/* welcome animation */
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }to{
+        transform: translateX(-100%);
+    }
+}
+
+/* timeline line animation */
+
+@keyframes moveline{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
