@@ -1,3 +1,35 @@
+/* Loading Screen */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 80px;
+    }
+    
+    .logo-header, .logo-header2 {
+        top: 35%;
+        text-align: center;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 60px;
+    }
+
+    .logo-header{
+        top: 40%;
+        font-size: 20px;
+    }
+
+    .logo-header2 {
+        top: 60%;
+        font-size: 20px;
+    }
+}
+/* end of Loading Screen */
+
+
+
 /* Navbar */
 @media (max-width: 768px) {
     header{
@@ -651,67 +683,69 @@
 /*------------- Horizontal Scroll(Projects) -------------*/
 
 
-.horizontal-scroll{
-    padding: 0 20px;
-
-    .horizontal-section{
-    padding: 100px 0;
-
-    .sticky-wrapper{
-        position: sticky;
-        top: 100px;
-        width: 100%;
-        overflow: hidden;
-        text-align: center;
-
-        h1{
-            font-size: 46px;
-            color: white;
-            margin-left: 0px;
-            margin-bottom: 50px;
-            margin-top: 80px;
-            position: relative;
-            top: -50px;
+@media (max-width: 480px) {
+    .horizontal-scroll{
+        padding: 0 20px;
+    
+        .horizontal-section{
+        padding: 100px 0;
+    
+        .sticky-wrapper{
+            position: sticky;
+            top: 100px;
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+    
+            h1{
+                font-size: 46px;
+                color: white;
+                margin-left: 0px;
+                margin-bottom: 50px;
+                margin-top: 80px;
+                position: relative;
+                top: -50px;
+            }
+    
+            .element-wrapper{
+                position: relative;
+                display: flex;
+    
+                .element {
+                    margin: 0 20px 0 0;
+                    flex-shrink: 0;
+    
+                    img{
+                        width: 500px;
+                        height: 400px;
+                    }
+                    }
+                } 
+            }
+         
         }
-
-        .element-wrapper{
-            position: relative;
-            display: flex;
-
-            .element {
-                margin: 0 20px 0 0;
-                flex-shrink: 0;
-
-                img{
+        
+        .horizontal-section2 {
+        padding: 300px 0;
+        
+    
+        .sticky-wrapper2 {
+            position: sticky;
+            top: 100px;
+            width: 100%;
+            overflow: hidden;
+    
+            .element-wrapper2 {
+                position: relative;
+                display: flex;
+                
+                .element {
                     width: 500px;
                     height: 400px;
-                }
-                }
-            } 
-        }
-     
-    }
-    
-    .horizontal-section2 {
-    padding: 300px 0;
-    
-
-    .sticky-wrapper2 {
-        position: sticky;
-        top: 100px;
-        width: 100%;
-        overflow: hidden;
-
-        .element-wrapper2 {
-            position: relative;
-            display: flex;
-            
-            .element {
-                width: 500px;
-                height: 400px;
-                background-color: purple;
-                margin: 0 20px 0 0;
-                flex-shrink: 0;
+                    background-color: purple;
+                    margin: 0 20px 0 0;
+                    flex-shrink: 0;
+                    }
                 }
             }
         }
